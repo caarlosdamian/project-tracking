@@ -1,5 +1,18 @@
-.header{
-    .container{
-        padding: 38px 32px;
+.header {
+  .container {
+    padding: 38px 32px 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .hamburguer {
+      cursor: pointer;
     }
+    .logo {
+      .img {
+        width: 24px;
+        height: 24px;
+        object-fit: cover;
+      }
+    }
+  }
 }
