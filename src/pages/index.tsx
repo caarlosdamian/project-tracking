@@ -5,6 +5,7 @@ import styles from "../styles/Home.module.scss";
 import { Shape } from "@/components/shape/Shape";
 import Image from "next/image";
 import ilustration from '../images/illustration-devices.svg'
+import { Details } from "@/components/details/Details";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,6 +26,7 @@ export default function Home() {
         <Shape />
         <Header />
         <Image alt="feature" src={ilustration} className={styles.ilustration} />
+        <Details/>
       </main>
     </>
   );
