@@ -4,12 +4,13 @@ import { Header } from "@/components/header/Header";
 import styles from "../styles/Home.module.scss";
 import { Shape } from "@/components/shape/Shape";
 import Image from "next/image";
-import ilustration from '../images/illustration-devices.svg'
+import ilustration from "../images/illustration-devices.svg";
 import { Details } from "@/components/details/Details";
-
-const inter = Inter({ subsets: ["latin"] });
+import { Menu } from "@/components/menu/Menu";
+import { useState } from "react";
 
 export default function Home() {
+  const [showMenu, setShowMenu] = useState(false);
   return (
     <>
       <Head>
@@ -23,10 +24,11 @@ export default function Home() {
         </style>
       </Head>
       <main className={styles.main}>
+        {showMenu && <Menu />}
         <Shape />
-        <Header />
+        <Header showMenu={showMenu} setShowMenu={setShowMenu} />
         <Image alt="feature" src={ilustration} className={styles.ilustration} />
-        <Details/>
+        <Details />
       </main>
     </>
   );
