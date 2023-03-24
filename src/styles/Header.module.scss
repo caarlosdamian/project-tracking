@@ -41,6 +41,11 @@
         text-align: right;
         letter-spacing: 1px;
         color: #242942;
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
 
       .menucircle {
@@ -62,6 +67,11 @@
         color: #242942;
         mix-blend-mode: normal;
         opacity: 0.5;
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }
