@@ -24,4 +24,24 @@
     letter-spacing: 1.2px;
     color: #242942;
   }
+  .login {
+    font-family: "Barlow Condensed";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: 1.2px;
+    color: #242942;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+  }
+
+  hr {
+    background: #242942;
+    mix-blend-mode: normal;
+    opacity: 0.15;
+    height: 1px;
+    width: 100%;
+  }
 }

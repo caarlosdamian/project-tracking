@@ -24,6 +24,8 @@ export const Menu = () => {
           {item.label}
         </span>
       ))}
+      <hr />
+      <span className={styles.login}>LOGIN</span>
     </div>
   );
 };
