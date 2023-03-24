@@ -4,6 +4,7 @@ import styles from "../../styles/Header.module.scss";
 import logo from "../../images/logo.svg";
 import hamburger from "../../images/icon-hamburger.svg";
 import close from "../../images/icon-close.svg";
+import { links } from "../menu/Menu";
 
 interface Props {
   showMenu: boolean;
@@ -27,6 +28,15 @@ export const Header = ({ setShowMenu, showMenu }: Props) => {
               onClick={() => setShowMenu(true)}
             />
           )}
+        </div>
+        <div className={styles.menuheader}>
+          {links.map((item) => (
+            <span key={item.id} className={styles.label}>
+              {item.label}
+            </span>
+          ))}
+          <div className={styles.menucircle}></div>
+          <span className={styles.labelLogin}>LOGIN</span>
         </div>
       </div>
     </nav>

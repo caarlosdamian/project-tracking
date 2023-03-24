@@ -1,17 +1,67 @@
+@import "./mixin.scss";
 .header {
   .container {
     padding: 38px 32px 64px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include devices(tablet) {
+      padding: 64px 165px;
+    }
     .hamburguer {
       cursor: pointer;
+      @include devices(tablet) {
+        display: none;
+      }
     }
     .logo {
       .img {
         width: 24px;
         height: 24px;
         object-fit: cover;
+      }
+    }
+
+    .menuheader {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      display: none;
+      gap: 42px;
+      @include devices(tablet) {
+        display: flex;
+      }
+      .label {
+        font-family: "Barlow Condensed";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 18px;
+        text-align: right;
+        letter-spacing: 1px;
+        color: #242942;
+      }
+
+      .menucircle {
+        height: 6px;
+        width: 6px;
+        border-radius: 50%;
+        background: #242942;
+        mix-blend-mode: normal;
+        opacity: 0.15;
+      }
+      .labelLogin {
+        font-family: "Barlow Condensed";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 18px;
+        text-align: right;
+        letter-spacing: 1px;
+        color: #242942;
+        mix-blend-mode: normal;
+        opacity: 0.5;
       }
     }
   }

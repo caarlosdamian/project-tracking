@@ -1,8 +1,21 @@
+@import "./mixin.scss";
 .main {
   position: relative;
-overflow: hidden;
-  .ilustration{
+  overflow: hidden;
+
+  @include devices(tablet) {
+    overflow-x: hidden;
+    height: 100vh;
+  }
+  .ilustration {
     width: 482px;
-height: 239px;
+    height: 239px;
+    @include devices(tablet) {
+      width: 916px;
+      height: 455px;
+      object-fit: cover;
+      position: absolute;
+      right: -268px;
+    }
   }
 }
